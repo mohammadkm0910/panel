@@ -1,8 +1,3 @@
-<?php 
-    if(!isset($db)) {
-        $db = new \Model\Database();
-    }
-?>
 <nav class="navbar navbar-expand-lg navbar-light navbar-admin">
     <div class="container-fluid justify-content-between">
         <ul class="navbar-nav flex-row">
@@ -12,8 +7,13 @@
                 </a>
             </li>
             <li class="nav-item me-3 me-lg-1 open-panel">
-                <a class="nav-link" href="#" id="open-sidebar">
+                <a class="nav-link" id="open-sidebar">
                     <i class="fas fa-bars fa-lg"></i>
+                </a>
+            </li>
+            <li class="nav-item me-3 me-lg-1">
+                <a class="nav-link" href="<?php url('/'); ?>">
+                    <i class="fas fa-home fa-lg"></i>
                 </a>
             </li>
             <li class="nav-item dropdown me-3 me-lg-1">
@@ -22,9 +22,9 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" >
                     <?php if(isset($_SESSION['user'])) { 
-                        $username = $db->select("SELECT * FROM `users` WHERE `id`= ?; ",[$_SESSION['user']])->fetch();
+                       $userModel = new \Model\UserModel();
                     ?>
-                    <li><a class="dropdown-item disabled user-select-none"><?php echo $username['username']; ?></a></li>
+                    <li><a class="dropdown-item disabled user-select-none"><?php echo $userModel->getUsernameById($_SESSION['user']); ?></a></li>
                     <li><a class="dropdown-item" href="<?php url('logout'); ?>">خروج</a></li>
                     <?php } else { ?>
                     <li><a class="dropdown-item" href="<?php url('login'); ?>">ورود</a></li>

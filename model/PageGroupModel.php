@@ -16,10 +16,11 @@ class PageGroupModel extends Database
         $db = new Database();
         return $db->select("SELECT * FROM `page_groups` WHERE `id`= ? ;",[$id])->fetch();
     }
-    public function parentPageGroup()
+    public function parentPageGroup($isDesc = true)
     {
         $db = new Database();
-        return $db->select("SELECT * FROM `page_groups` WHERE `parent_id` IS NULL ORDER BY `id` DESC; ")->fetchAll();
+        $desc = $isDesc ? "DESC" : "ASC";
+        return $db->select("SELECT * FROM `page_groups` WHERE `parent_id` IS NULL ORDER BY `id` $desc; ")->fetchAll();
     }
     public function childPageGroup($isDesc = true)
     {
