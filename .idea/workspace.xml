@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7dfb655d-f180-45ad-96fd-5f6d864b83b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/Auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/Controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/Home.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/Page.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/PageGroup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/CreateDb.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/Database.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/PageGroupModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/PageModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/admin/css/mdb.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/admin/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/admin/js/jquery.validate.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/admin/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/admin/js/mdb.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/admin/js/valid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/app/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/app/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image-pages/2021-02-15-18-03-39.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image-pages/phone1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/shared/font-awesome-free-5.15.2/all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/shared/font-awesome-free-5.15.2/webfonts/fa-brands-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/shared/font-awesome-free-5.15.2/webfonts/fa-brands-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/shared/font-awesome-free-5.15.2/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/shared/font-awesome-free-5.15.2/webfonts/fa-brands-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/shared/font-awesome-free-5.15.2/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/shared/font-awesome-free-5.15.2/webfonts/fa-regular-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/shared/font-awesome-free-5.15.2/webfonts/fa-regular-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/shared/font-awesome-free-5.15.2/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/shared/font-awesome-free-5.15.2/webfonts/fa-regular-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/shared/font-awesome-free-5.15.2/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/shared/font-awesome-free-5.15.2/webfonts/fa-solid-900.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/shared/font-awesome-free-5.15.2/webfonts/fa-solid-900.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/shared/font-awesome-free-5.15.2/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/shared/font-awesome-free-5.15.2/webfonts/fa-solid-900.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/shared/font-awesome-free-5.15.2/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/shared/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/Loader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/ServerInfo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/router.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/admin/page-group/create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/admin/page-group/delete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/admin/page-group/edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/admin/page-group/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/admin/page-group/show.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/admin/page/create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/admin/page/delete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/admin/page/edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/admin/page/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/admin/page/show.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/admin/partial/navbar-admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/admin/partial/scripts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/admin/partial/sidebar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/app/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/auth/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/auth/register.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1pT1msKDcYB60iCQ3ANQDA898I2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7dfb655d-f180-45ad-96fd-5f6d864b83b4" name="Default Changelist" comment="" />
+      <created>1615192427648</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615192427648</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="838" y="417" width="494" height="254" key="Github.ShareDialog" timestamp="1615192969473">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="838" y="417" width="494" height="254" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1615192969473" />
+    <state x="785" y="225" key="Github.UntrackedFilesDialog" timestamp="1615192758061">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="785" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1615192758061" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1615193071449">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1615193071449" />
+  </component>
+</project>

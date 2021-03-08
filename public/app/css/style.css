@@ -1,0 +1,208 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+.header-top {
+    background-color: #262626;
+    height: 50px;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.nav-container {
+    width: auto;
+    display: inline-block;
+}
+.nav-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.nav-icon {
+    display: none;
+    height: 50px;
+    width: 50px;
+    float: right;
+    cursor: pointer;
+    transition: background-color 0.5s linear;
+}
+.nav-icon:hover {
+    background-color: #2979FF;
+}
+.nav-icon span {
+    display: block;
+    height: 2px;
+    width: 40px;
+    border-bottom: 2px solid #ffffff;
+    margin: 11px auto;
+    transition: 0.5s ease;
+}
+.nav-change.nav-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+.nav-change.nav-icon span:nth-child(2) {
+    opacity: 0;
+}
+.nav-change.nav-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -7px);
+}
+.nav-brand {
+    float: right;
+    padding: 0 8px;
+}
+.nav-brand a {
+    color: #fafafa;
+    line-height: 50px;
+    font-size: 20px;
+}
+.nav-content {
+    float: right;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 4px;
+}
+.nav-content li {
+    line-height: 50px;
+    min-width: 80px;
+    position: relative;
+}
+.nav-content > li > a {
+    color: #ffffff;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    padding: 0 8px;
+    text-align: center;
+    font-size: 18px;
+    transition: background-color 0.5s ease;
+}
+.nav-content > li:hover > a {
+    background-color: #42A5F5;
+}
+.nav-content > li > a::after {
+    content: '\f0d7';
+    font-weight: bold;
+    font-family: Font Awesome\ 5 Free;
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    transition: transform 0.5s ease;
+}
+.nav-content > li:hover > a::after {
+    transform: rotate(180deg);
+}
+.nav-sub-list {
+    position: absolute;
+    display: none;
+    list-style: none;
+    background-color: #f5f5f5;
+    box-shadow: 0px 8px 10px -2px rgba(0,0,0,0.5);
+    min-width: 150px;
+    right: 20px;
+    z-index: 500;
+}
+.nav-sub-list li a {
+    display: block;
+    padding: 0 8px;
+    color: #555;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+.nav-sub-list li a:hover { 
+    background-color: #29B6F6;
+    color: #ffffff;
+}
+.nav-content > li.nav-register > .nav-sub-list li:hover a {
+    background-color: #4CAF50;
+}
+.nav-content li:hover .nav-sub-list {
+    display: block;
+}
+.nav-left {
+    float: left;
+    margin-right: 50px;
+    line-height: 50px;
+}
+.nav-left a {
+    color: #ffffff;
+    display: block;
+    padding: 0 4px;
+    text-align: center;
+    min-width: 50px;
+}
+.nav-left  a:hover {
+    background-color: #009efd;
+}
+@media screen and (min-width: 700px) {
+    .nav-content {
+        display: flex !important;
+    }
+    .nav-content > li.nav-register:hover > a {
+        background-color: #E91E63;
+    }
+    .nav-content > li.nav-register > a {
+        width: 50px;
+    }
+    .nav-content > li.nav-register > .nav-sub-list {
+        right: -100px;
+    }
+    .nav-content > li.nav-register > a::after {
+        content: "";
+    }
+}
+@media screen and (max-width: 700px) {
+    .header-top {
+        height: auto;
+    }
+    .nav-container {
+        width: 100%;
+        display: block;
+        position: relative;
+        overflow: hidden;
+    }
+    .nav-icon {
+        display: block;
+    }
+    .nav-content {
+        margin: 0px;
+        min-height: 0;
+        display: none;
+        width: 100%;
+    }
+    .nav-content > li {
+        position: static;
+    }
+    .nav-content > li > a {
+        text-align: right;
+        padding-right: 12px;
+    }
+    .nav-content > li > a::after {
+        left: 12px;
+    }
+    .nav-content li .nav-sub-list {
+        position: static;
+        width: 100%;
+        right: 0;
+        box-shadow: none;
+    }
+    .nav-content li .nav-sub-list li a{
+        padding-right: 16px;
+    }
+    .nav-content li {
+        min-width: none;
+    }
+    .nav-left {
+        float : none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+    }
+}
