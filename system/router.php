@@ -4,8 +4,8 @@
 function uri($uri, $class, $method, $requestMethod = 'GET')
 {
     $values = array();
-    $subURIs = explode('/', $uri);
-    $request_uri = array_slice(explode('/', $_SERVER['REQUEST_URI']), 2);
+    $subURIs = explode('/',strtolower($uri));
+    $request_uri = array_slice(explode('/', strtolower($_SERVER['REQUEST_URI'])), 2);
     if ($request_uri[0] == "" or $request_uri[0] == "/")
         $request_uri[0] = "home";
     $isBreak = false;

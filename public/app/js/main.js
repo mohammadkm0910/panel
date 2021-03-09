@@ -1,4 +1,4 @@
-$("#nav-mobile").click(function() {
+$("#nav-open").click(function() {
   $(this).toggleClass("nav-change");
-  $("#nav-content-mobile").slideToggle("slow");
+  $("#nav-mobile").slideToggle("slow");
 });

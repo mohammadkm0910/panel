@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,54 +12,45 @@
     <link rel="stylesheet" href="<?php asset('public/shared/font-awesome-free-5.15.2/all.css'); ?>">
     <title>شهر فناوری</title>
 </head>
+
 <body dir="rtl">
     <header class="header-top">
-        <nav class="nav-container">
-            <section class="nav-icon" id="nav-mobile">
-                <span></span>
-                <span></span>
-                <span></span>
-            </section>
-            <section class="nav-brand">
-                <a href="#">شهر فناوری</a>
-            </section>
-            <ul class="nav-content" id="nav-content-mobile">
+        <nav class="navbar row">
+            <a href="#" class="navbar-brand">شهر فناوری</a>
+            <div class="navbar-mobile" id="nav-mobile">
                 <?php foreach ($parentPageGroups as $parentPageGroup) { ?>
-                    <li>
-                        <a href="#"><?php echo $parentPageGroup['title']; ?></a>
-                        <ul class="nav-sub-list">
+                    <div class="dropdown">
+                        <button class="btn-drop">
+                            <?php echo $parentPageGroup['title']; ?>
+                        </button>
+                        <div class="dropdown-content">
                             <?php foreach ($childPageGroups as $childPageGroup) {
                                 if ($childPageGroup['parent_id'] == $parentPageGroup['id']) { ?>
-                                    <li><a href="#"><?php echo $childPageGroup['title']; ?></a></li>
+                                    <a href="#"><?php echo $childPageGroup['title']; ?></a>
                             <?php }
                             } ?>
-                        </ul>
-                    </li>
+                        </div>
+                    </div>
                 <?php } ?>
-                <li class="nav-register">
-                    <?php if (isset($_SESSION['user'])) { ?>
-                        <a><i class="fas fa-power-off"></i></a>
-                        <ul class="nav-sub-list">
-                            <li><a><?php echo $userModel->getUsernameById($_SESSION['user']); ?></a></li>
-                            <li>
-                                <a href="<?php url('logout'); ?>">خروج</a>
-                            </li>
-                        </ul>
-                    <?php } else { ?>
-                        <a><i class="fas fa-user-alt"></i></a>
-                        <ul class="nav-sub-list">
-                            <li>
-                                <a href="<?php url('register'); ?>">ثبت نام</a>
-                            </li>
-                            <li>
-                                <a href="<?php url('login'); ?>">ورود</a>
-                            </li>
-                        </ul>
-                    <?php } ?>
-                </li>
-            </ul>
-            <div class="nav-left">
-                <a href="#"><i class="fa fa-search"></i></a>
+                <div class="dropdown register">
+                    <button class="btn-drop">
+                        <i class="fas fa-user-alt"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">ثبت نام</a>
+                        <a href="#">ورود</a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-left">
+                <button>
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="btn-nav" id="nav-open">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
     </header>
