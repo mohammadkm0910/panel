@@ -1,5 +1,6 @@
 <?php
 
+use System\ServerInfo;
 
 function uri($uri, $class, $method, $requestMethod = 'GET')
 {
@@ -36,15 +37,13 @@ function uri($uri, $class, $method, $requestMethod = 'GET')
             } else
                 $object->$method(implode(',', $values));
         } else
-            if ($requestMethod == 'POST')
+            if ($requestMethod == 'POST') {
                 if (isset($_FILES)) {
                     $request = array_merge($_POST, $_FILES);
                     $object->$method($request);
                 } else
                     $object->$method($_POST);
-            else
+            } else
                 $object->$method();
-    } else {
-
-    }
+    } 
 }

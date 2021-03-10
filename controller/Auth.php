@@ -21,7 +21,12 @@ class Auth {
             $isUser = $db->select("SELECT * FROM `users` WHERE `email` = ?; ",[$request['email']])->fetch();
             if ($isUser != null) {
                 if (password_verify($request['password'],$isUser['password'])) {
-                    $_SESSION['user'] = $isUser['id'];
+                    $remember = isset($request['remember'])? true : false;
+                    if ($remember) {
+                        setcookie("user",$isUser['id'],time() + (86400 * 30));
+                    } else {
+                        $_SESSION['user'] = $isUser['id'];
+                    }
                     $this->redirect("home");
                 } else {
                     $this->redirectBack();
@@ -57,7 +62,9 @@ class Auth {
     }
     public function logout()
     {
-        if(isset($_SESSION['user'])) {
+        if(isset($_COOKIE['user']) and $_COOKIE['user'] != "") {
+            setcookie("user", "", time() - 3600);
+        } else {
             unset($_SESSION['user']);
             session_destroy();
         }
@@ -65,9 +72,10 @@ class Auth {
     }
     public function checkAdmin()
     {
-        if (isset($_SESSION['user'])) {
+        if ((isset($_COOKIE['user']) and $_COOKIE['user'] != "") or (isset($_SESSION['user']) and $_SESSION['user'] != "")) {
             $db = new Database();
-            $isUser = $db->select("SELECT * FROM `users` WHERE `id`= ?; ",[$_SESSION['user']])->fetch();
+            $id = isset($_COOKIE['user']) and $_COOKIE['user'] != ""? $_COOKIE['user'] : $_SESSION['user'];
+            $isUser = $db->select("SELECT * FROM `users` WHERE `id`= ?; ",[$id])->fetch();
             if ($isUser != null) {
                 if ($isUser['permission'] != "admin") {
                     $this->redirect('home');

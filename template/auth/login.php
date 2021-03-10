@@ -32,6 +32,10 @@
                 <input type="password" class="form-control" name="password" id="password">
                 <label for="password" class="form-label">پسورد کاربر</label>
             </div>
+            <div class="mt-2">
+                <label for="remember" class="form-label user-select-none">مرا به خاطر نگه دار</label>
+                <input type="checkbox" class="form-check-input"name="remember" id="remember">
+            </div>
             <?php
             if ($httpReferer == $domain."/panel/login") {
                 echo "<span class='text-danger'>فیلد ها معتبر نیستند!!</span>";

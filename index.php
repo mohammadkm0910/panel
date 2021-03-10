@@ -23,6 +23,10 @@ function url($url)
     $url = trim($url,"/");
     echo $domain."/panel/$url";
 }
+function isUser() {
+    return (isset($_COOKIE['user']) and $_COOKIE['user'] != "") or
+     (isset($_SESSION['user']) and $_SESSION['user'] != "");
+}
 uri("page-group","PageGroup","index");
 uri("page-group/create","PageGroup","create");
 uri("page-group/store","PageGroup","store","POST");

@@ -16,4 +16,12 @@ class ServerInfo
     {
         return self::getProtocol().$_SERVER['HTTP_HOST'];
     }
+    public static function getCurrentUrl()
+    {
+        return self::getDomain().$_SERVER['REQUEST_URI'];
+    }
+    public static function getMethodField()
+    {
+        return $_SERVER['REQUEST_METHOD'];
+    }
 }
